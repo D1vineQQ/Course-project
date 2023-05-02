@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat.ttf");
+}
+.entrance .menu .flex1,
+.entrance .menu .flex2,
+.entrance .menu .flex3, .nav-bar nav a, .nav-bar .brand a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  height: 56px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 0.1px solid grey;
+}
+.nav-bar .brand {
+  margin: 8px 0;
+  margin-left: 20px;
+  position: absolute;
+  float: left;
+  line-height: 40px;
+}
+.nav-bar .brand a {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: none;
+}
+.nav-bar nav {
+  right: 1%;
+  position: fixed;
+  box-sizing: content-box;
+}
+.nav-bar nav a {
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  text-transform: none;
+}
+.nav-bar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-bar nav ul li {
+  float: left;
+  position: relative;
+  margin: 8px 7pt;
+}
+.nav-bar nav ul li a {
+  line-height: 40px;
+}
+
+.entrance-image {
+  background-image: url(../pictures/wed-botanica2.jpg);
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  opacity: 100%;
+}
+.entrance-image .upper-text,
+.entrance-image .under-text {
+  position: relative;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+.entrance-image .upper-text {
+  top: 49%;
+  font-size: 25pt;
+}
+.entrance-image .under-text {
+  top: 54%;
+  font-size: 13pt;
+  font-style: italic;
+}
+
+.entrance {
+  text-align: center;
+}
+.entrance .text1 {
+  font-family: "Caveat";
+  color: rgb(97, 126, 77);
+  font-weight: 600;
+  font-size: xx-large;
+  margin-top: 50px;
+}
+.entrance .text2 {
+  font-family: Roboto, sans-serif;
+  color: rgb(97, 126, 77);
+  font-weight: 600;
+  font-size: xx-large;
+  margin-top: 80px;
+}
+.entrance .text3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+  margin: 20px 0 30px 0;
+}
+.entrance .image {
+  width: 85%;
+  background-image: url(../pictures/listya-zelen-vetka.jpg);
+  height: 150px;
+  margin: 50px auto;
+  border-radius: 15px;
+  background-position: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.entrance .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(24, 40, 13);
+  flex-wrap: wrap-reverse;
+}
+.entrance .menu .flex1,
+.entrance .menu .flex2,
+.entrance .menu .flex3 {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  font-size: larger;
+  margin: 20px 70px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.flex-menu {
+  margin: 35px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.flex-menu .plant {
+  font-size: large;
+  display: flex;
+  width: 520px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  margin: 15px;
+}
+.flex-menu .plant img {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+}
+.flex-menu .plant .right-container h2 {
+  margin: 10px auto;
+}
+.flex-menu .plant .right-container .text {
+  font-size: larger;
+  height: 182px;
+}
+.flex-menu .plant .right-container a {
+  font-family: Roboto, sans-serif;
+  color: white;
+  background-color: rgb(97, 126, 77);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.text-special {
+  font-size: larger;
+  height: 151px;
+}
+
+footer {
+  font-family: Roboto, sans-serif;
+  font-size: larger;
+  text-align: center;
+  padding: 32px;
+  margin-top: 100px;
+  letter-spacing: 1.2px;
+}/*# sourceMappingURL=style.css.map */
