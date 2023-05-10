@@ -2,7 +2,8 @@
   font-family: "Caveat";
   src: url("../fonts/Caveat.ttf");
 }
-.entrance .menu .flex1,
+.intro .button1,
+.intro .button2, .entrance .menu .flex1,
 .entrance .menu .flex2,
 .entrance .menu .flex3, .nav-bar nav a, .nav-bar .brand a {
   color: black;
@@ -79,7 +80,7 @@ body {
 }
 .entrance-image .upper-text {
   top: 49%;
-  font-size: 25pt;
+  font-size: xx-large;
 }
 .entrance-image .under-text {
   top: 54%;
@@ -152,10 +153,22 @@ body {
 .flex-menu .plant {
   font-size: large;
   display: flex;
-  width: 520px;
   font-family: Roboto, sans-serif;
   text-align: center;
-  margin: 15px;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant {
+    width: 520px;
+    margin: 15px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant {
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    margin: 5px;
+  }
 }
 .flex-menu .plant img {
   height: 250px;
@@ -163,11 +176,29 @@ body {
   border-radius: 20px;
 }
 .flex-menu .plant .right-container h2 {
-  margin: 10px auto;
+  margin: 0px auto 3px auto;
 }
 .flex-menu .plant .right-container .text {
   font-size: larger;
-  height: 182px;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container .text {
+    height: 182px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant .right-container .text {
+    text-align: justify;
+    width: 270px;
+  }
+}
+.flex-menu .plant .right-container .text-special {
+  font-size: larger;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container .text-special {
+    height: 151px;
+  }
 }
 .flex-menu .plant .right-container a {
   font-family: Roboto, sans-serif;
@@ -177,14 +208,18 @@ body {
   justify-content: center;
   text-decoration: none;
   box-sizing: border-box;
-  margin: 10px;
   padding: 8px;
   border-radius: 5px;
 }
-
-.text-special {
-  font-size: larger;
-  height: 151px;
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container a {
+    margin: 10px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant .right-container a {
+    margin: 10px 10px 12px 10px;
+  }
 }
 
 footer {
@@ -192,7 +227,7 @@ footer {
   font-size: larger;
   text-align: center;
   padding: 32px;
-  margin-top: 100px;
+  margin-top: 50px;
   letter-spacing: 1.2px;
 }
 
@@ -212,6 +247,168 @@ footer {
 }
 .entrance-image1 .upper-text {
   top: 49%;
-  font-size: xxx-large;
   color: white;
+}
+@media (max-width: 425px) {
+  .entrance-image1 .upper-text {
+    font-size: xx-large;
+  }
+}
+@media (min-width: 426px) {
+  .entrance-image1 .upper-text {
+    font-size: xxx-large;
+  }
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(24, 40, 13);
+  color: white;
+  font-family: Roboto;
+  height: 120px;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.intro {
+  text-align: center;
+}
+.intro .image1,
+.intro .image2,
+.intro .image3 {
+  width: 80%;
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  background-position: 0;
+  margin: 0 auto;
+}
+.intro .image1 {
+  background-image: url(../pictures/vodorosli.jpg);
+}
+.intro .image2 {
+  background-image: url(../pictures/spor.jpg);
+}
+.intro .image3 {
+  background-image: url(../pictures/golosemen_nada_szhat.jpg);
+}
+.intro .text {
+  font-family: Roboto;
+  font-size: x-large;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin: 15px auto;
+}
+.intro .button1,
+.intro .button2 {
+  font-size: larger;
+  font-family: Roboto;
+  color: white;
+  background-color: darkolivegreen;
+  border-radius: 15px;
+  display: flex;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+}
+.intro .flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  gap: 25px 50px;
+}
+@media (min-width: 426px) {
+  .intro .flex .flex-box {
+    width: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .intro .flex .flex-box {
+    width: 270px;
+  }
+}
+.intro .flex .flex-box .img1,
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
+  display: flex;
+  background-position: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 426px) {
+  .intro .flex .flex-box .img1,
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .intro .flex .flex-box .img1,
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
+    width: 270px;
+    height: 270px;
+  }
+}
+.intro .flex .flex-box .img1 {
+  background-image: url(../pictures/zelen_vodorosli.jpg);
+}
+.intro .flex .flex-box .img2 {
+  background-image: url(../pictures/bury_vodorosli.jpg);
+}
+.intro .flex .flex-box .img3 {
+  background-image: url(../pictures/diatom_vodorosli.jpg);
+}
+.intro .flex .flex-box .img4 {
+  background-image: url(../pictures/gold_vodorosli.jpg);
+}
+.intro .flex .flex-box .img5 {
+  background-image: url(../pictures/red_vodorosli.jpg);
+}
+.intro .flex .flex-box .img6 {
+  background-image: url(../pictures/chor_vodorosli.jpg);
+}
+.intro .flex .flex-box .img7 {
+  background-image: url(../pictures/moh.jpg);
+}
+.intro .flex .flex-box .img8 {
+  background-image: url(../pictures/paporotnik.jpg);
+}
+.intro .flex .flex-box .img9 {
+  background-image: url(../pictures/plaun_hvoshi.jpg);
+}
+.intro .flex .flex-box .button2 {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
