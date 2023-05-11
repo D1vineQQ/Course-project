@@ -40,6 +40,9 @@ body {
   }
 
   nav {
+    @media(max-width:767px) {
+      display:none;
+    }
     right: 1%;
     position: fixed;
     box-sizing: content-box;

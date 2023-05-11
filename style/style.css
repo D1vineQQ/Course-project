@@ -43,6 +43,11 @@ body {
   position: fixed;
   box-sizing: content-box;
 }
+@media (max-width: 767px) {
+  .nav-bar nav {
+    display: none;
+  }
+}
 .nav-bar nav a {
   font-family: Roboto, sans-serif;
   font-size: 15pt;
@@ -357,28 +362,28 @@ footer {
 }
 @media (min-width: 426px) {
   .intro .flex .flex-box .img1,
-  .intro .flex .flex-box .img2,
-  .intro .flex .flex-box .img3,
-  .intro .flex .flex-box .img4,
-  .intro .flex .flex-box .img5,
-  .intro .flex .flex-box .img6,
-  .intro .flex .flex-box .img7,
-  .intro .flex .flex-box .img8,
-  .intro .flex .flex-box .img9 {
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
     width: 350px;
     height: 350px;
   }
 }
 @media (max-width: 425px) {
   .intro .flex .flex-box .img1,
-  .intro .flex .flex-box .img2,
-  .intro .flex .flex-box .img3,
-  .intro .flex .flex-box .img4,
-  .intro .flex .flex-box .img5,
-  .intro .flex .flex-box .img6,
-  .intro .flex .flex-box .img7,
-  .intro .flex .flex-box .img8,
-  .intro .flex .flex-box .img9 {
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
     width: 270px;
     height: 270px;
   }
