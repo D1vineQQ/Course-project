@@ -72,6 +72,7 @@ body {
 
 .entrance-image {
   background-image: url(../pictures/wed-botanica2.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 600px;
   background-position: center;
@@ -292,7 +293,7 @@ footer {
   justify-content: center;
   background-color: rgb(24, 40, 13);
   color: white;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;;
   height: 120px;
   align-items: center;
   font-size: xx-large;
@@ -326,7 +327,7 @@ footer {
   }
 
   .text {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;;
     font-size: x-large;
     font-weight: bold;
     color: darkolivegreen;
@@ -337,7 +338,7 @@ footer {
   .button2 {
     @extend %a-black;
     font-size: larger;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     color: white;
     background-color: darkolivegreen;
     border-radius: 15px;

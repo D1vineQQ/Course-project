@@ -65,6 +65,7 @@ body {
 
 .entrance-image {
   background-image: url(../pictures/wed-botanica2.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 600px;
   background-position: center;
@@ -266,7 +267,7 @@ footer {
   justify-content: center;
   background-color: rgb(24, 40, 13);
   color: white;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   height: 120px;
   align-items: center;
   font-size: xx-large;
@@ -296,7 +297,7 @@ footer {
   background-image: url(../pictures/golosemen_nada_szhat.jpg);
 }
 .intro .text {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: x-large;
   font-weight: bold;
   color: darkolivegreen;
@@ -305,7 +306,7 @@ footer {
 .intro .button1,
 .intro .button2 {
   font-size: larger;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   color: white;
   background-color: darkolivegreen;
   border-radius: 15px;
@@ -356,28 +357,28 @@ footer {
 }
 @media (min-width: 426px) {
   .intro .flex .flex-box .img1,
-.intro .flex .flex-box .img2,
-.intro .flex .flex-box .img3,
-.intro .flex .flex-box .img4,
-.intro .flex .flex-box .img5,
-.intro .flex .flex-box .img6,
-.intro .flex .flex-box .img7,
-.intro .flex .flex-box .img8,
-.intro .flex .flex-box .img9 {
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
     width: 350px;
     height: 350px;
   }
 }
 @media (max-width: 425px) {
   .intro .flex .flex-box .img1,
-.intro .flex .flex-box .img2,
-.intro .flex .flex-box .img3,
-.intro .flex .flex-box .img4,
-.intro .flex .flex-box .img5,
-.intro .flex .flex-box .img6,
-.intro .flex .flex-box .img7,
-.intro .flex .flex-box .img8,
-.intro .flex .flex-box .img9 {
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
     width: 270px;
     height: 270px;
   }
