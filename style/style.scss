@@ -8,6 +8,29 @@
   text-decoration: none;
 }
 
+// .magic:hover{
+//   font-size: xx-large;
+//   transition: all 0.3s ease;
+// }
+// .magic{
+//   transition: all 0.3s ease;
+// }
+
+.grow:hover,
+.plant img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+// a:hover{
+//   color:black;
+// }
+
+* {
+  transition: all 0.3s ease;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -36,13 +59,15 @@ body {
       font-weight: bold;
       letter-spacing: 1.5px;
       text-transform: none;
+      border-radius: 5px;
     }
   }
 
   nav {
     @media(max-width:767px) {
-      display:none;
+      display: none;
     }
+
     right: 1%;
     position: fixed;
     box-sizing: content-box;
@@ -67,6 +92,13 @@ body {
 
         a {
           line-height: 40px;
+          display: flex;
+          border-radius: 5px;
+          padding: 0 5px;
+        }
+
+        a:hover {
+          background-color: rgb(223, 223, 223);
         }
       }
     }
@@ -88,11 +120,16 @@ body {
     position: relative;
     font-family: Roboto, sans-serif;
     font-weight: 700;
+    text-shadow: rgb(177, 192, 157) 0px 0px 10px;
   }
 
   .upper-text {
     top: 49%;
     font-size: xx-large;
+  }
+
+  .upper-text:hover {
+    font-size: 28pt;
   }
 
   .under-text {
@@ -146,9 +183,7 @@ body {
     background-color: rgb(24, 40, 13);
     flex-wrap: wrap-reverse;
 
-    .flex1,
-    .flex2,
-    .flex3 {
+    a {
       display: flex;
       justify-content: center;
       @extend %a-black;
@@ -161,6 +196,10 @@ body {
       background-color: white;
       border-radius: 5px;
       width: 200px;
+    }
+
+    a:hover {
+      background-color: rgb(223, 223, 223);
     }
   }
 }
@@ -209,9 +248,10 @@ body {
           // text-align: justify;
           // padding: 4px;
         }
+
         @media (max-width:619px) {
           text-align: justify;
-          width:270px;
+          width: 270px;
         }
       }
 
@@ -223,6 +263,7 @@ body {
           // text-align: justify;
           // padding:4px 30px;
         }
+
         // @media (max-width:619px) {
         //   text-align: justify;
         //   width:250px;
@@ -237,14 +278,21 @@ body {
         justify-content: center;
         text-decoration: none;
         box-sizing: border-box;
+
         @media (min-width:620px) {
           margin: 10px;
         }
+
         @media (max-width:619px) {
           margin: 10px 10px 12px 10px;
         }
+
         padding: 8px;
         border-radius: 5px;
+      }
+
+      a:hover {
+        background-color: rgb(68, 95, 49);
       }
     }
   }
@@ -279,12 +327,15 @@ footer {
 
   .upper-text {
     top: 49%;
-    @media (max-width:425px){
+
+    @media (max-width:425px) {
       font-size: xx-large;
     }
-    @media (min-width:426px){
+
+    @media (min-width:426px) {
       font-size: xxx-large;
     }
+
     //font-size: xxx-large;
     color: white;
   }
@@ -296,7 +347,8 @@ footer {
   justify-content: center;
   background-color: rgb(24, 40, 13);
   color: white;
-  font-family: Roboto, sans-serif;;
+  font-family: Roboto, sans-serif;
+  ;
   height: 120px;
   align-items: center;
   font-size: xx-large;
@@ -317,6 +369,15 @@ footer {
     margin: 0 auto;
   }
 
+  .image1:hover, .image2:hover, .image3:hover{
+    box-shadow:
+          2px 2px #53eab0,
+          4px 4px #53eab0,
+          6px 6px #53eab0;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+  }
+
   .image1 {
     background-image: url(../pictures/vodorosli.jpg);
   }
@@ -330,7 +391,8 @@ footer {
   }
 
   .text {
-    font-family: Roboto, sans-serif;;
+    font-family: Roboto, sans-serif;
+    ;
     font-size: x-large;
     font-weight: bold;
     color: darkolivegreen;
@@ -354,6 +416,10 @@ footer {
     margin-bottom: 25px;
     letter-spacing: 1.2px;
   }
+  .button1:hover,
+  .button2:hover{
+      background-color: rgb(44, 65, 29);
+  }
 
   .flex {
     display: flex;
@@ -366,10 +432,11 @@ footer {
     gap: 25px 50px;
 
     .flex-box {
-      @media (min-width:426px){
+      @media (min-width:426px) {
         width: 350px;
       }
-      @media (max-width:425px){
+
+      @media (max-width:425px) {
         width: 270px;
       }
 
@@ -383,14 +450,17 @@ footer {
       .img8,
       .img9 {
         display: flex;
-        @media (min-width:426px){
+
+        @media (min-width:426px) {
           width: 350px;
           height: 350px;
         }
-        @media (max-width:425px){
+
+        @media (max-width:425px) {
           width: 270px;
           height: 270px;
         }
+
         background-position: 0;
         background-size: cover;
         background-repeat: no-repeat;
@@ -398,6 +468,18 @@ footer {
         margin-bottom: 15px;
       }
 
+      .img1:hover,
+      .img2:hover,
+      .img3:hover,
+      .img4:hover,
+      .img5:hover,
+      .img6:hover,
+      .img7:hover,
+      .img8:hover,
+      .img9:hover {
+        border-radius: 40%;
+      }
+      
       .img1 {
         background-image: url(../pictures/zelen_vodorosli.jpg);
       }

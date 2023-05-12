@@ -3,11 +3,18 @@
   src: url("../fonts/Caveat.ttf");
 }
 .intro .button1,
-.intro .button2, .entrance .menu .flex1,
-.entrance .menu .flex2,
-.entrance .menu .flex3, .nav-bar nav a, .nav-bar .brand a {
+.intro .button2, .entrance .menu a, .nav-bar nav a, .nav-bar .brand a {
   color: black;
   text-decoration: none;
+}
+
+.grow:hover,
+.plant img:hover {
+  transform: scale(1.1);
+}
+
+* {
+  transition: all 0.3s ease;
 }
 
 body {
@@ -37,6 +44,7 @@ body {
   font-weight: bold;
   letter-spacing: 1.5px;
   text-transform: none;
+  border-radius: 5px;
 }
 .nav-bar nav {
   right: 1%;
@@ -66,6 +74,12 @@ body {
 }
 .nav-bar nav ul li a {
   line-height: 40px;
+  display: flex;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.nav-bar nav ul li a:hover {
+  background-color: rgb(223, 223, 223);
 }
 
 .entrance-image {
@@ -83,10 +97,14 @@ body {
   position: relative;
   font-family: Roboto, sans-serif;
   font-weight: 700;
+  text-shadow: rgb(177, 192, 157) 0px 0px 10px;
 }
 .entrance-image .upper-text {
   top: 49%;
   font-size: xx-large;
+}
+.entrance-image .upper-text:hover {
+  font-size: 28pt;
 }
 .entrance-image .under-text {
   top: 54%;
@@ -134,9 +152,7 @@ body {
   background-color: rgb(24, 40, 13);
   flex-wrap: wrap-reverse;
 }
-.entrance .menu .flex1,
-.entrance .menu .flex2,
-.entrance .menu .flex3 {
+.entrance .menu a {
   display: flex;
   justify-content: center;
   font-family: Roboto, sans-serif;
@@ -148,6 +164,9 @@ body {
   background-color: white;
   border-radius: 5px;
   width: 200px;
+}
+.entrance .menu a:hover {
+  background-color: rgb(223, 223, 223);
 }
 
 .flex-menu {
@@ -227,6 +246,9 @@ body {
     margin: 10px 10px 12px 10px;
   }
 }
+.flex-menu .plant .right-container a:hover {
+  background-color: rgb(68, 95, 49);
+}
 
 footer {
   font-family: Roboto, sans-serif;
@@ -292,6 +314,10 @@ footer {
   background-position: 0;
   margin: 0 auto;
 }
+.intro .image1:hover, .intro .image2:hover, .intro .image3:hover {
+  box-shadow: 2px 2px #53eab0, 4px 4px #53eab0, 6px 6px #53eab0;
+  transform: translateX(-3px);
+}
 .intro .image1 {
   background-image: url(../pictures/vodorosli.jpg);
 }
@@ -323,6 +349,10 @@ footer {
   margin: auto;
   margin-bottom: 25px;
   letter-spacing: 1.2px;
+}
+.intro .button1:hover,
+.intro .button2:hover {
+  background-color: rgb(44, 65, 29);
 }
 .intro .flex {
   display: flex;
@@ -362,31 +392,42 @@ footer {
 }
 @media (min-width: 426px) {
   .intro .flex .flex-box .img1,
-.intro .flex .flex-box .img2,
-.intro .flex .flex-box .img3,
-.intro .flex .flex-box .img4,
-.intro .flex .flex-box .img5,
-.intro .flex .flex-box .img6,
-.intro .flex .flex-box .img7,
-.intro .flex .flex-box .img8,
-.intro .flex .flex-box .img9 {
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
     width: 350px;
     height: 350px;
   }
 }
 @media (max-width: 425px) {
   .intro .flex .flex-box .img1,
-.intro .flex .flex-box .img2,
-.intro .flex .flex-box .img3,
-.intro .flex .flex-box .img4,
-.intro .flex .flex-box .img5,
-.intro .flex .flex-box .img6,
-.intro .flex .flex-box .img7,
-.intro .flex .flex-box .img8,
-.intro .flex .flex-box .img9 {
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
     width: 270px;
     height: 270px;
   }
+}
+.intro .flex .flex-box .img1:hover,
+.intro .flex .flex-box .img2:hover,
+.intro .flex .flex-box .img3:hover,
+.intro .flex .flex-box .img4:hover,
+.intro .flex .flex-box .img5:hover,
+.intro .flex .flex-box .img6:hover,
+.intro .flex .flex-box .img7:hover,
+.intro .flex .flex-box .img8:hover,
+.intro .flex .flex-box .img9:hover {
+  border-radius: 40%;
 }
 .intro .flex .flex-box .img1 {
   background-image: url(../pictures/zelen_vodorosli.jpg);
