@@ -1,0 +1,64 @@
+.nav-bar nav a, .nav-bar .brand a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar {
+  height: 56px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 0.1px solid grey;
+}
+.nav-bar .brand {
+  margin: 8px 0;
+  margin-left: 20px;
+  position: absolute;
+  float: left;
+  line-height: 40px;
+}
+.nav-bar .brand a {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: none;
+  border-radius: 5px;
+}
+.nav-bar nav {
+  right: 1%;
+  position: fixed;
+  box-sizing: content-box;
+}
+@media (max-width: 767px) {
+  .nav-bar nav {
+    display: none;
+  }
+}
+.nav-bar nav a {
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+  font-weight: 500;
+  text-transform: none;
+}
+.nav-bar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-bar nav ul li {
+  float: left;
+  position: relative;
+  margin: 8px 7pt;
+}
+.nav-bar nav ul li a {
+  line-height: 40px;
+  display: flex;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.nav-bar nav ul li a:hover {
+  background-color: rgb(223, 223, 223);
+}/*# sourceMappingURL=header.css.map */
