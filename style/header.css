@@ -19,6 +19,7 @@
   line-height: 40px;
 }
 .nav-bar .brand a {
+  height:40px;
   display: flex;
   font-family: Roboto, sans-serif;
   font-size: 15pt;
@@ -61,4 +62,17 @@
 }
 .nav-bar nav ul li a:hover {
   background-color: rgb(223, 223, 223);
+}
+
+footer {
+  font-family: Roboto, sans-serif;
+  font-size: larger;
+  text-align: center;
+  padding: 32px;
+  margin-top: 50px;
+  letter-spacing: 1.2px;
+}
+
+* {
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=header.css.map */
