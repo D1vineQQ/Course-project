@@ -74,6 +74,9 @@ body {
         font-size: xxx-large;
         color: white;
     }
+    .upper-text:hover{
+        font-size:x-large;
+    }
 }
 
 .intro {
@@ -151,6 +154,7 @@ body {
 
 .itcss * {
     border-radius: 15px;
+    transition: none;
 }
 
 .itcss__item {
@@ -282,4 +286,13 @@ body {
             line-height: 35px;
         }
     }
+}
+
+img:hover{
+    box-shadow:
+          2px 2px #53eab0,
+          4px 4px #53eab0,
+          6px 6px #53eab0;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
 }

@@ -102,6 +102,19 @@ body {
   font-size: xxx-large;
   color: white;
 }
+.entrance-image1 .upper-text:hover,
+.entrance-image2 .upper-text:hover,
+.entrance-image3 .upper-text:hover,
+.entrance-image4 .upper-text:hover,
+.entrance-image5 .upper-text:hover,
+.entrance-image6 .upper-text:hover,
+.entrance-image7 .upper-text:hover,
+.entrance-image8 .upper-text:hover,
+.entrance-image9 .upper-text:hover,
+.entrance-image10 .upper-text:hover,
+.entrance-image11 .upper-text:hover {
+  font-size: x-large;
+}
 
 .intro {
   display: flex;
@@ -173,6 +186,7 @@ body {
 
 .itcss * {
   border-radius: 15px;
+  transition: none;
 }
 
 .itcss__item {
@@ -300,4 +314,9 @@ body {
 }
 .intro-book .right-container .text li {
   font-weight: bold;
+}
+
+img:hover {
+  box-shadow: 2px 2px #53eab0, 4px 4px #53eab0, 6px 6px #53eab0;
+  transform: translateX(-3px);
 }/*# sourceMappingURL=LowerPlants.css.map */
