@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная страница</title>
     <link href="style/style.css" rel="stylesheet" media="all" />
+    <link href="style/header.css" rel="stylesheet" media="all" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,17 +14,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="java-script/JQuery/jquery-3.6.4.js"
+    ></script>
+    <script type="text/javascript" src="java-script/sliders.js"></script>
   </head>
   <body>
     <header class="nav-bar">
       <div class="brand">
-        <a href="index.html"><img src="pictures/logo.png" />Ботаника</a>
+        <a href="index.html"><img src="pictures/Untitled.svg" />Ботаника</a>
       </div>
       <nav>
+        <img id="burger" src="pictures/burger.png">
         <ul class="nav-list">
-          <li><a href="">Главная страница</a></li>
+          <li><a href="index.html">Главная страница</a></li>
           <li><a href="theory.html">Теоретический раздел</a></li>
-          <li><a href="">Литература</a></li>
+          <li><a href="literature.html">Литература</a></li>
         </ul>
       </nav>
     </header>
@@ -35,7 +42,9 @@
 
     <div class="entrance">
       <div class="text1">
-        Вся та красота, которую мы ищем - уже создала природа!
+        <span class="magic"
+          >Вся та красота, которую мы ищем - уже создала природа!</span
+        >
       </div>
       <div class="text2">Основная цель курса</div>
       <div class="text3">
@@ -43,9 +52,9 @@
       </div>
       <div class="image"></div>
       <div class="menu">
-        <a href="" class="flex1">Главная</a>
-        <a href="" class="flex2">Теория</a>
-        <a href="" class="flex3">Литература</a>
+        <a href="index.html" class="flex1">Главная</a>
+        <a href="theory.html" class="flex2">Теория</a>
+        <a href="literature.html" class="flex3">Литература</a>
       </div>
     </div>
 
@@ -59,7 +68,7 @@
             на органы и ткани. К таким организмам относятся водоросли
             (автотрофные протисты).
           </div>
-          <a href="">Перейти к изучению</a>
+          <a href="lowerPlants.html">Перейти к изучению</a>
         </div>
       </div>
 
@@ -68,9 +77,10 @@
         <div class="right-container">
           <h2>Высшие растения</h2>
           <div class="text">
-            Растения, тело которых дифференцировано на органы и ткани, с многоклеточными органами бесполого и полового размножения.
+            Растения, тело которых дифференцировано на органы и ткани, с
+            многоклеточными органами бесполого и полового размножения.
           </div>
-          <a href="">Перейти к изучению</a>
+          <a href="spore.html">Перейти к изучению</a>
         </div>
       </div>
 
@@ -81,14 +91,21 @@
           <div class="text-special">
             Хочешь найти дополнительную информацию по интересующей теме?
           </div>
-          <a href="">Перейти к изучению</a>
+          <a href="literature.html">Перейти к изучению</a>
         </div>
       </div>
     </div>
-    </div>
 
     <footer>
-      [4layseee@gmail.com] | [Беласин Дмитрий] | [ИСиТ 1 группа 1 курс]
+      <!-- [4layseee@gmail.com] | [Беласин Дмитрий] | [ИСиТ 1 группа 1 курс] -->
+      <table>
+        <thead>
+          <tr>
+            <th>Контактная информация:</th>
+          </tr>
+        </thead>
+        <tbody class="footer"></tbody>
+      </table>
     </footer>
   </body>
 </html>

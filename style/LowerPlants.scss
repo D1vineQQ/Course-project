@@ -1,0 +1,285 @@
+%a-black {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.entrance-image1 {
+    background-image: url(../pictures/vodorosli.jpg);
+}
+
+.entrance-image2 {
+    background-image: url(../pictures/zelen.jpg);
+}
+
+.entrance-image3 {
+    background-image: url(../pictures/23123.jpg);
+}
+
+.entrance-image4 {
+    background-image: url(../pictures/diatom-6.jpg);
+}
+
+.entrance-image5 {
+    background-image: url(../pictures/sporia.jpg);
+}
+
+.entrance-image6 {
+    background-image: url(../pictures/aaaaa.jpeg);
+}
+
+.entrance-image7 {
+    background-image: url(../pictures/paporotnik.jpg);
+}
+
+.entrance-image8 {
+    background-image: url(../pictures/hvo.jpg);
+}
+
+.entrance-image9 {
+    background-image: url(../pictures/Depositphotos_16833415_s-2019_1743446924959628.jpg);
+}
+
+
+.entrance-image1,
+.entrance-image2,
+.entrance-image3,
+.entrance-image4,
+.entrance-image5,
+.entrance-image6,
+.entrance-image7,
+.entrance-image8,
+.entrance-image9,
+.entrance-image10,
+.entrance-image11 {
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    .upper-text,
+    .under-text {
+        position: relative;
+        font-weight: 700;
+    }
+
+    .upper-text {
+        top: 49%;
+        font-size: xxx-large;
+        color: white;
+    }
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+
+    img {
+        @media (min-width:425px) {
+            width: 420px;
+        }
+        @media (max-width:425px) {
+            width:300px;
+        }
+        border-radius: 15px;
+    }
+
+    .right-container {
+        h1 {
+            color: olivedrab;
+            text-align: center;
+        }
+
+        .text {
+            font-weight: bold;
+            text-align: justify;
+            margin: 0px 10px;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // background-color: rgb(24, 40, 13);
+    flex-wrap: wrap-reverse;
+
+    a {
+        display: flex;
+        justify-content: center;
+        @extend %a-black;
+        font-weight: 600;
+        box-sizing: border-box;
+        font-size: larger;
+        margin: 20px 50px;
+        padding: 10px;
+        background-color: rgb(94, 107, 47);
+        color: white;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    a:hover {
+        background-color: rgb(60, 73, 26);
+    }
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(24, 40, 13);
+    color: white;
+    height: 120px;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.itcss {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.itcss * {
+    border-radius: 15px;
+}
+
+.itcss__item {
+    position: relative;
+}
+
+.itcss__item::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.img-fluid {
+    display: inline-block;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.info {
+    width: 70%;
+    margin: 15px auto;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.one-image {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+
+    h2 {
+        color: olivedrab;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 25px;
+    }
+}
+
+.four-img {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    color: olivedrab;
+
+    .img-container {
+        text-align: center;
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+}
+
+.two-img {
+    @media(max-width:1024px) {
+        display: none;
+    }
+
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width:70%;
+    margin: auto;
+
+    .img-container {
+        text-align: center;
+        color: olivedrab;
+
+        img {
+            width: 30vw;
+            height: 55vh;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .spec {
+            width: 36vw;
+        }
+    }
+}
+
+.intro-book {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+
+    img {
+        @media (min-width:425px) {
+            width: 420px;
+        }
+        @media (max-width:425px) {
+            width:300px;
+        }
+        border-radius: 15px;
+    }
+
+    .right-container {
+        h1 {
+            color: olivedrab;
+            text-align: center;
+        }
+
+        width:40vw;
+
+
+        .text {
+            li {
+                font-weight: bold;
+            }
+
+            text-align: justify;
+            margin: 0px 10px;
+            line-height: 35px;
+        }
+    }
+}

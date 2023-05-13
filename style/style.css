@@ -2,68 +2,15 @@
   font-family: "Caveat";
   src: url("../fonts/Caveat.ttf");
 }
-.entrance .menu .flex1,
-.entrance .menu .flex2,
-.entrance .menu .flex3, .nav-bar nav a, .nav-bar .brand a {
+.intro .button1,
+.intro .button2, .entrance .menu a {
   color: black;
   text-decoration: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar {
-  height: 56px;
-  background-color: white;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  border-bottom: 0.1px solid grey;
-}
-.nav-bar .brand {
-  margin: 8px 0;
-  margin-left: 20px;
-  position: absolute;
-  float: left;
-  line-height: 40px;
-}
-.nav-bar .brand a {
-  display: flex;
-  font-family: Roboto, sans-serif;
-  font-size: 15pt;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: none;
-}
-.nav-bar nav {
-  right: 1%;
-  position: fixed;
-  box-sizing: content-box;
-}
-.nav-bar nav a {
-  font-family: Roboto, sans-serif;
-  font-size: 15pt;
-  font-weight: 500;
-  text-transform: none;
-}
-.nav-bar nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav-bar nav ul li {
-  float: left;
-  position: relative;
-  margin: 8px 7pt;
-}
-.nav-bar nav ul li a {
-  line-height: 40px;
-}
-
 .entrance-image {
   background-image: url(../pictures/wed-botanica2.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 600px;
   background-position: center;
@@ -76,15 +23,34 @@ body {
   position: relative;
   font-family: Roboto, sans-serif;
   font-weight: 700;
+  text-shadow: rgb(177, 192, 157) 0px 0px 10px;
 }
 .entrance-image .upper-text {
   top: 49%;
-  font-size: 25pt;
+  font-size: xx-large;
+}
+.entrance-image .upper-text:hover {
+  font-size: 28pt;
 }
 .entrance-image .under-text {
   top: 54%;
   font-size: 13pt;
   font-style: italic;
+}
+
+.grow:hover,
+.plant img:hover {
+  transform: scale(1.1);
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .entrance {
@@ -127,9 +93,7 @@ body {
   background-color: rgb(24, 40, 13);
   flex-wrap: wrap-reverse;
 }
-.entrance .menu .flex1,
-.entrance .menu .flex2,
-.entrance .menu .flex3 {
+.entrance .menu a {
   display: flex;
   justify-content: center;
   font-family: Roboto, sans-serif;
@@ -142,6 +106,9 @@ body {
   border-radius: 5px;
   width: 200px;
 }
+.entrance .menu a:hover {
+  background-color: rgb(223, 223, 223);
+}
 
 .flex-menu {
   margin: 35px 0;
@@ -152,10 +119,22 @@ body {
 .flex-menu .plant {
   font-size: large;
   display: flex;
-  width: 520px;
   font-family: Roboto, sans-serif;
   text-align: center;
-  margin: 15px;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant {
+    width: 520px;
+    margin: 15px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant {
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    margin: 5px;
+  }
 }
 .flex-menu .plant img {
   height: 250px;
@@ -163,11 +142,29 @@ body {
   border-radius: 20px;
 }
 .flex-menu .plant .right-container h2 {
-  margin: 10px auto;
+  margin: 0px auto 3px auto;
 }
 .flex-menu .plant .right-container .text {
   font-size: larger;
-  height: 182px;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container .text {
+    height: 182px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant .right-container .text {
+    text-align: justify;
+    width: 270px;
+  }
+}
+.flex-menu .plant .right-container .text-special {
+  font-size: larger;
+}
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container .text-special {
+    height: 151px;
+  }
 }
 .flex-menu .plant .right-container a {
   font-family: Roboto, sans-serif;
@@ -177,14 +174,21 @@ body {
   justify-content: center;
   text-decoration: none;
   box-sizing: border-box;
-  margin: 10px;
   padding: 8px;
   border-radius: 5px;
 }
-
-.text-special {
-  font-size: larger;
-  height: 151px;
+@media (min-width: 620px) {
+  .flex-menu .plant .right-container a {
+    margin: 10px;
+  }
+}
+@media (max-width: 619px) {
+  .flex-menu .plant .right-container a {
+    margin: 10px 10px 12px 10px;
+  }
+}
+.flex-menu .plant .right-container a:hover {
+  background-color: rgb(68, 95, 49);
 }
 
 footer {
@@ -192,7 +196,7 @@ footer {
   font-size: larger;
   text-align: center;
   padding: 32px;
-  margin-top: 100px;
+  margin-top: 50px;
   letter-spacing: 1.2px;
 }
 
@@ -212,6 +216,187 @@ footer {
 }
 .entrance-image1 .upper-text {
   top: 49%;
-  font-size: xxx-large;
   color: white;
+}
+@media (max-width: 425px) {
+  .entrance-image1 .upper-text {
+    font-size: xx-large;
+  }
+}
+@media (min-width: 426px) {
+  .entrance-image1 .upper-text {
+    font-size: xxx-large;
+  }
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(24, 40, 13);
+  color: white;
+  font-family: Roboto, sans-serif;
+  height: 120px;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.intro {
+  text-align: center;
+}
+.intro .image1,
+.intro .image2,
+.intro .image3 {
+  width: 80%;
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  background-position: 0;
+  margin: 0 auto;
+}
+.intro .image1:hover, .intro .image2:hover, .intro .image3:hover {
+  box-shadow: 2px 2px #53eab0, 4px 4px #53eab0, 6px 6px #53eab0;
+  transform: translateX(-3px);
+}
+.intro .image1 {
+  background-image: url(../pictures/vodorosli.jpg);
+}
+.intro .image2 {
+  background-image: url(../pictures/spor.jpg);
+}
+.intro .image3 {
+  background-image: url(../pictures/golosemen_nada_szhat.jpg);
+}
+.intro .text {
+  font-family: Roboto, sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin: 15px auto;
+}
+.intro .button1,
+.intro .button2 {
+  font-size: larger;
+  font-family: Roboto, sans-serif;
+  color: white;
+  background-color: darkolivegreen;
+  border-radius: 15px;
+  display: flex;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+}
+.intro .button1:hover,
+.intro .button2:hover {
+  background-color: rgb(44, 65, 29);
+}
+.intro .flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  gap: 25px 50px;
+}
+@media (min-width: 426px) {
+  .intro .flex .flex-box {
+    width: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .intro .flex .flex-box {
+    width: 270px;
+  }
+}
+.intro .flex .flex-box .img1,
+.intro .flex .flex-box .img2,
+.intro .flex .flex-box .img3,
+.intro .flex .flex-box .img4,
+.intro .flex .flex-box .img5,
+.intro .flex .flex-box .img6,
+.intro .flex .flex-box .img7,
+.intro .flex .flex-box .img8,
+.intro .flex .flex-box .img9 {
+  display: flex;
+  background-position: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 426px) {
+  .intro .flex .flex-box .img1,
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .intro .flex .flex-box .img1,
+  .intro .flex .flex-box .img2,
+  .intro .flex .flex-box .img3,
+  .intro .flex .flex-box .img4,
+  .intro .flex .flex-box .img5,
+  .intro .flex .flex-box .img6,
+  .intro .flex .flex-box .img7,
+  .intro .flex .flex-box .img8,
+  .intro .flex .flex-box .img9 {
+    width: 270px;
+    height: 270px;
+  }
+}
+.intro .flex .flex-box .img1:hover,
+.intro .flex .flex-box .img2:hover,
+.intro .flex .flex-box .img3:hover,
+.intro .flex .flex-box .img4:hover,
+.intro .flex .flex-box .img5:hover,
+.intro .flex .flex-box .img6:hover,
+.intro .flex .flex-box .img7:hover,
+.intro .flex .flex-box .img8:hover,
+.intro .flex .flex-box .img9:hover {
+  border-radius: 40%;
+}
+.intro .flex .flex-box .img1 {
+  background-image: url(../pictures/zelen_vodorosli.jpg);
+}
+.intro .flex .flex-box .img2 {
+  background-image: url(../pictures/bury_vodorosli.jpg);
+}
+.intro .flex .flex-box .img3 {
+  background-image: url(../pictures/diatom_vodorosli.jpg);
+}
+.intro .flex .flex-box .img4 {
+  background-image: url(../pictures/gold_vodorosli.jpg);
+}
+.intro .flex .flex-box .img5 {
+  background-image: url(../pictures/red_vodorosli.jpg);
+}
+.intro .flex .flex-box .img6 {
+  background-image: url(../pictures/chor_vodorosli.jpg);
+}
+.intro .flex .flex-box .img7 {
+  background-image: url(../pictures/moh.jpg);
+}
+.intro .flex .flex-box .img8 {
+  background-image: url(../pictures/paporotnik.jpg);
+}
+.intro .flex .flex-box .img9 {
+  background-image: url(../pictures/plaun_hvoshi.jpg);
+}
+.intro .flex .flex-box .button2 {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

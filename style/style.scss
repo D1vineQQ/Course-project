@@ -8,70 +8,9 @@
   text-decoration: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar {
-  height: 56px;
-  background-color: white;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  border-bottom: 0.1px solid grey;
-
-  .brand {
-    margin: 8px 0;
-    margin-left: 20px;
-    position: absolute;
-    float: left;
-    line-height: 40px;
-
-    a {
-      display: flex;
-      @extend %a-black;
-      font-family: Roboto, sans-serif;
-      font-size: 15pt;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: none;
-    }
-  }
-
-  nav {
-    right: 1%;
-    position: fixed;
-    box-sizing: content-box;
-
-    a {
-      @extend %a-black;
-      font-family: Roboto, sans-serif;
-      font-size: 15pt;
-      font-weight: 500;
-      text-transform: none;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        float: left;
-        position: relative;
-        margin: 8px 7pt;
-
-        a {
-          line-height: 40px;
-        }
-      }
-    }
-  }
-}
-
 .entrance-image {
   background-image: url(../pictures/wed-botanica2.jpg);
+  background-attachment: fixed;
   width: 100%;
   height: 600px;
   background-position: center;
@@ -84,11 +23,16 @@ body {
     position: relative;
     font-family: Roboto, sans-serif;
     font-weight: 700;
+    text-shadow: rgb(177, 192, 157) 0px 0px 10px;
   }
 
   .upper-text {
     top: 49%;
-    font-size: 25pt;
+    font-size: xx-large;
+  }
+
+  .upper-text:hover {
+    font-size: 28pt;
   }
 
   .under-text {
@@ -96,6 +40,23 @@ body {
     font-size: 13pt;
     font-style: italic;
   }
+}
+
+.grow:hover,
+.plant img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .entrance {
@@ -142,9 +103,7 @@ body {
     background-color: rgb(24, 40, 13);
     flex-wrap: wrap-reverse;
 
-    .flex1,
-    .flex2,
-    .flex3 {
+    a {
       display: flex;
       justify-content: center;
       @extend %a-black;
@@ -158,21 +117,36 @@ body {
       border-radius: 5px;
       width: 200px;
     }
+
+    a:hover {
+      background-color: rgb(223, 223, 223);
+    }
   }
 }
 
 .flex-menu {
-  margin:35px 0;
+  margin: 35px 0;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+
   .plant {
     font-size: large;
     display: flex;
-    width: 520px;
     font-family: Roboto, sans-serif;
     text-align: center;
-    margin:15px;
+
+    @media(min-width:620px) {
+      width: 520px;
+      margin: 15px;
+    }
+
+    @media (max-width:619px) {
+      flex-direction: column;
+      width: 300px;
+      align-items: center;
+      margin: 5px;
+    }
 
     img {
       height: 250px;
@@ -181,14 +155,41 @@ body {
     }
 
     .right-container {
+
       h2 {
-        margin: 10px auto;
+        margin: 0px auto 3px auto;
       }
 
-      .text{
+      .text {
         font-size: larger;
-        height:182px;
+
+        @media(min-width:620px) {
+          height: 182px;
+          // text-align: justify;
+          // padding: 4px;
+        }
+
+        @media (max-width:619px) {
+          text-align: justify;
+          width: 270px;
+        }
       }
+
+      .text-special {
+        font-size: larger;
+
+        @media(min-width:620px) {
+          height: 151px;
+          // text-align: justify;
+          // padding:4px 30px;
+        }
+
+        // @media (max-width:619px) {
+        //   text-align: justify;
+        //   width:250px;
+        // }
+      }
+
       a {
         font-family: Roboto, sans-serif;
         color: white;
@@ -197,36 +198,46 @@ body {
         justify-content: center;
         text-decoration: none;
         box-sizing: border-box;
-        margin: 10px;
+
+        @media (min-width:620px) {
+          margin: 10px;
+        }
+
+        @media (max-width:619px) {
+          margin: 10px 10px 12px 10px;
+        }
+
         padding: 8px;
         border-radius: 5px;
+      }
+
+      a:hover {
+        background-color: rgb(68, 95, 49);
       }
     }
   }
 }
-.text-special{
-  font-size: larger;
-  height:151px;
-}
 
-footer{
+
+
+footer {
   font-family: Roboto, sans-serif;
   font-size: larger;
-  text-align:center;
+  text-align: center;
   // background-color: rgb(241, 241, 241);
   padding: 32px;
-  margin-top: 100px;
+  margin-top: 50px;
   letter-spacing: 1.2px;
 }
 
-
-.entrance-image1{
+.entrance-image1 {
   background-image: url(../pictures/lavender.jpg);
   width: 100%;
   height: 450px;
   background-position: center;
   background-size: cover;
   text-align: center;
+
   .upper-text,
   .under-text {
     position: relative;
@@ -236,8 +247,198 @@ footer{
 
   .upper-text {
     top: 49%;
-    font-size:xxx-large;
-    color:white;
+
+    @media (max-width:425px) {
+      font-size: xx-large;
+    }
+
+    @media (min-width:426px) {
+      font-size: xxx-large;
+    }
+
+    //font-size: xxx-large;
+    color: white;
   }
-  
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(24, 40, 13);
+  color: white;
+  font-family: Roboto, sans-serif;
+  ;
+  height: 120px;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.intro {
+  text-align: center;
+
+  .image1,
+  .image2,
+  .image3 {
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    background-position: 0;
+    margin: 0 auto;
+  }
+
+  .image1:hover, .image2:hover, .image3:hover{
+    box-shadow:
+          2px 2px #53eab0,
+          4px 4px #53eab0,
+          6px 6px #53eab0;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+  }
+
+  .image1 {
+    background-image: url(../pictures/vodorosli.jpg);
+  }
+
+  .image2 {
+    background-image: url(../pictures/spor.jpg);
+  }
+
+  .image3 {
+    background-image: url(../pictures/golosemen_nada_szhat.jpg);
+  }
+
+  .text {
+    font-family: Roboto, sans-serif;
+    ;
+    font-size: x-large;
+    font-weight: bold;
+    color: darkolivegreen;
+    margin: 15px auto;
+  }
+
+  .button1,
+  .button2 {
+    @extend %a-black;
+    font-size: larger;
+    font-family: Roboto, sans-serif;
+    color: white;
+    background-color: darkolivegreen;
+    border-radius: 15px;
+    display: flex;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+  }
+  .button1:hover,
+  .button2:hover{
+      background-color: rgb(44, 65, 29);
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    gap: 25px 50px;
+
+    .flex-box {
+      @media (min-width:426px) {
+        width: 350px;
+      }
+
+      @media (max-width:425px) {
+        width: 270px;
+      }
+
+      .img1,
+      .img2,
+      .img3,
+      .img4,
+      .img5,
+      .img6,
+      .img7,
+      .img8,
+      .img9 {
+        display: flex;
+
+        @media (min-width:426px) {
+          width: 350px;
+          height: 350px;
+        }
+
+        @media (max-width:425px) {
+          width: 270px;
+          height: 270px;
+        }
+
+        background-position: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+
+      .img1:hover,
+      .img2:hover,
+      .img3:hover,
+      .img4:hover,
+      .img5:hover,
+      .img6:hover,
+      .img7:hover,
+      .img8:hover,
+      .img9:hover {
+        border-radius: 40%;
+      }
+      
+      .img1 {
+        background-image: url(../pictures/zelen_vodorosli.jpg);
+      }
+
+      .img2 {
+        background-image: url(../pictures/bury_vodorosli.jpg);
+      }
+
+      .img3 {
+        background-image: url(../pictures/diatom_vodorosli.jpg);
+      }
+
+      .img4 {
+        background-image: url(../pictures/gold_vodorosli.jpg);
+      }
+
+      .img5 {
+        background-image: url(../pictures/red_vodorosli.jpg);
+      }
+
+      .img6 {
+        background-image: url(../pictures/chor_vodorosli.jpg);
+      }
+
+      .img7 {
+        background-image: url(../pictures/moh.jpg);
+      }
+
+      .img8 {
+        background-image: url(../pictures/paporotnik.jpg);
+      }
+
+      .img9 {
+        background-image: url(../pictures/plaun_hvoshi.jpg);
+      }
+
+      .button2 {
+        width: 100%;
+      }
+    }
+  }
 }
