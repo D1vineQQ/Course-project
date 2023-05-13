@@ -191,15 +191,6 @@ body {
   background-color: rgb(68, 95, 49);
 }
 
-footer {
-  font-family: Roboto, sans-serif;
-  font-size: larger;
-  text-align: center;
-  padding: 32px;
-  margin-top: 50px;
-  letter-spacing: 1.2px;
-}
-
 .entrance-image1 {
   background-image: url(../pictures/lavender.jpg);
   width: 100%;

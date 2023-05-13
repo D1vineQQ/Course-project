@@ -1,5 +1,5 @@
 $(function () {
-    let table = $('.footer'), tbody = "", fileAdress = "https://raw.githubusercontent.com/D1vineQQ/Course-project/Experimental/footer.xml";
+    let table = $('.footer'), tbody = "", fileAdress = "https://raw.githubusercontent.com/D1vineQQ/Course-project/main/footer.xml";
 
     const RequestObject = {
 
